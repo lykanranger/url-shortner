@@ -14,42 +14,45 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-color: rgb(255, 255, 255);
+    padding: 20px;
 }
 
-.container{
+.container {
     background: rgba(255, 255, 255, 0.24);
     border-radius: 10px;
     padding: 20px 30px;
     border: 2px solid #000;
     text-align: center;
-    min-width: 400px;
+    min-width: 320px;
+    max-width: 450px;
+    width: 100%;
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.container i{
-    font-size: 100px;
+.container i {
+    font-size: 80px;
     margin-bottom: 10px;
 }
 
-h1{
-    font-size: 28px;
+h1 {
+    font-size: 24px;
     margin-bottom: 20px;
     color: #333;
 }
 
-label{
+label {
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     margin: 10px 0;
     display: block;
 }
 
-input, textarea{
+input, textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 15px;
     border: 2px solid #000;
     border-radius: 5px;
@@ -59,32 +62,70 @@ input, textarea{
     font-weight: 500;
 }
 
-input::placeholder{
-    color: #222;
+input::placeholder {
+    color: #555;
 }
 
-.buttons{
+.buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-button{
-    width: 100%;
+button {
+    flex: 1;
+    min-width: 120px;
     color: #000;
     border: 2px solid #000;
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px;
     font-weight: 500;
     background-color: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-button:hover{
+button:hover {
     background-color: #000;
     color: #fff;
 }
 
-textarea{
+textarea {
     resize: none;
+}
+
+/* 📱 Responsive Breakpoints */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 20px;
+    }
+    .container i {
+        font-size: 70px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    label {
+        font-size: 13px;
+    }
+    button {
+        min-width: 100px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        min-width: 100%;
+        padding: 15px;
+    }
+    .container i {
+        font-size: 60px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    button {
+        width: 100%;
+    }
 }
